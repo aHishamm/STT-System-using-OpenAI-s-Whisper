@@ -23,5 +23,3 @@ choco install ffmpeg
 # on Windows using Scoop (https://scoop.sh/)
 scoop install ffmpeg
 ```
-
-Note: Private repository, mongoDB user password is exposed in code.
