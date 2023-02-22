@@ -5,6 +5,11 @@ The python script simply uses the Whisper API as the backend and Gradio web app 
 ```bash
 pip install gradio 
 pip install git+https://github.com/openai/whisper.git 
+pip install -U pip setuptools wheel
+pip install -U spacy
+python -m spacy download en_core_web_sm
+python -m spacy download xx_ent_wiki_sm
+pip install spacy-fastlang
 ```
 ffmpeg should also be installed 
 ```bash 
