@@ -2,7 +2,7 @@ import whisper
 import gradio as gr
 import spacy_fastlang
 import spacy
-#import pymongo_get_database
+import pymongo_get_database
 
 nlp = spacy.load('en_core_web_sm') 
 nlp.add_pipe('language_detector')
@@ -56,7 +56,7 @@ def whisperbackend(audiopath, audiopath2):
     elif lang == 'ar': 
         lang = 'Arabic'
     #send the translated work to the mongoDB database
-    #pymongo_get_database.create_document(translation)
+    pymongo_get_database.create_document(translation)
     return "The detected language is: \n"+lang+"\n Audio transcription: \n"+result+'\n'+translation
 
 demo = gr.Interface(fn=whisperbackend, 
